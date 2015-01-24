@@ -13,6 +13,9 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 public class CrativeUtilities {
     @Mod.Instance(Reference.MOD_ID)
     public static CreativeUtilities instance;
+	
+	@SidedProxy(clientSide = Reference.PROXY_CLIENT, serverSide = Reference.PROXY_SERVER)
+    public static IProxy proxy;
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event){
